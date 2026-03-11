@@ -1,0 +1,51 @@
+# ========================
+# Python
+# ========================
+__pycache__/
+*.py[cod]
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+
+# ========================
+# Virtual environments
+# ========================
+venv/
+.venv/
+env/
+
+# ========================
+# Environment variables (never commit secrets)
+# ========================
+.env
+
+# ========================
+# Data directories (generated at runtime)
+# ========================
+data/vectorstore/
+data/raw/
+data/processed/
+
+# Keep .gitkeep files tracked so empty folders persist in git
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/vectorstore/.gitkeep
+
+# ========================
+# Jupyter notebook checkpoints
+# ========================
+.ipynb_checkpoints/
+
+# ========================
+# IDE / editor files
+# ========================
+.vscode/
+.idea/
+*.DS_Store
+
+# ========================
+# OS files
+# ========================
+Thumbs.db
