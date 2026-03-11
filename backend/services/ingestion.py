@@ -86,11 +86,11 @@ def _store_in_vectordb(chunks: list, persist_directory: str) -> None:
         openai_api_key=settings.OPENAI_API_KEY,
     )
 
-    Chroma.from_documents(
-        documents=chunks,
-        embedding=embeddings,
-        persist_directory=persist_directory,
+    db = Chroma(
+    persist_directory=persist_directory,
+    embedding_function=embeddings,
     )
+    db.add_documents(chunks)
 
 
 def ingest_document(file_path: str) -> dict:
